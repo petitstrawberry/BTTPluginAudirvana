@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "1240"
+   version = "1.3">
+   <BuildAction
+      parallelizeBuildables = "YES"
+      buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A9454BBD22BE1E3300055860"
+               BuildableName = "BetterTouchToolPluginDevelopment.app"
+               BlueprintName = "BetterTouchToolPluginDevelopment"
+               ReferencedContainer = "container:BetterTouchToolPluginDevelopment.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES">
+      <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A9454BD322BE1E3500055860"
+               BuildableName = "BetterTouchToolPluginDevelopmentTests.xctest"
+               BlueprintName = "BetterTouchToolPluginDevelopmentTests"
+               ReferencedContainer = "container:BetterTouchToolPluginDevelopment.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A9454BDE22BE1E3500055860"
+               BuildableName = "BetterTouchToolPluginDevelopmentUITests.xctest"
+               BlueprintName = "BetterTouchToolPluginDevelopmentUITests"
+               ReferencedContainer = "container:BetterTouchToolPluginDevelopment.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A9454C5122BE69BA00055860"
+               BuildableName = "BTTPluginSupportTests.xctest"
+               BlueprintName = "BTTPluginSupportTests"
+               ReferencedContainer = "container:BetterTouchToolPluginDevelopment.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+      </Testables>
+   </TestAction>
+   <LaunchAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "NO"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
+      allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "A9454BBD22BE1E3300055860"
+            BuildableName = "BetterTouchToolPluginDevelopment.app"
+            BlueprintName = "BetterTouchToolPluginDevelopment"
+            ReferencedContainer = "container:BetterTouchToolPluginDevelopment.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </LaunchAction>
+   <ProfileAction
+      buildConfiguration = "Release"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "A9454BBD22BE1E3300055860"
+            BuildableName = "BetterTouchToolPluginDevelopment.app"
+            BlueprintName = "BetterTouchToolPluginDevelopment"
+            ReferencedContainer = "container:BetterTouchToolPluginDevelopment.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+   </ArchiveAction>
+</Scheme>
