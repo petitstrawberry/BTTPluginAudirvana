@@ -7,8 +7,7 @@ BTTの作者さんのプラグイン開発用プロジェクトを利用して�
 
 # Install
 
-1. [Releases](https://github.com/PetitStrawberry/BTTPluginAudirvana/releases)からダウンロードして解凍、
-~/Library/Application Support/BetterTouchTool/Pluginsへコピーする。
+1. [Releases](https://github.com/PetitStrawberry/BTTPluginAudirvana/releases)からダウンロードして解凍、.btttouchbarpluginを~/Library/Application Support/BetterTouchTool/Pluginsへコピーする。
    - この時、Pluginsフォルダが存在しなければ作る。僕は無かった。
 
 2. トリガー設定からダウンロードしたプラグインを選択する。
