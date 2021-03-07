@@ -8,10 +8,17 @@ Audirvanaで再生中の曲情報をTouchBarに表示するBTTプラグイン。
 一応Audirvana以外のプレイヤーにも対応しているが不完全。
 
 # Install
-
-[Releases](https://github.com/PetitStrawberry/BTTPluginAudirvana/releases)からダウンロードして解凍、.btttouchbarpluginを~/Library/Application Support/BetterTouchTool/Pluginsへコピーする。
-   - この時、Pluginsフォルダが存在しなければ作る。僕は無かった。
-
+すいません、開発者登録してないのでインストールが面倒です。
+1. [Releases](https://github.com/PetitStrawberry/BTTPluginAudirvana/releases)からダウンロードして解凍
+2. Gatekeeperを一時的に無効化
+```shell
+sudo spctl --master-disable
+```
+3. BTTTouchBarPluginAudirvana.btttouchbarpluginを開いてBTTにインストール
+4. Gatekeeperを有効化（安全のためちゃんと元に戻しておきましょう）
+```shell
+sudo spctl --master-enable
+```
 
 # How To Use それっぽいの
 TouchBarのトリガー設定から「NowPlaying on Audirvana」を選択する。
