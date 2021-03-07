@@ -3,6 +3,8 @@ This project is based on [BetterTouchToolPlugins](https://github.com/folivoraAI/
 
 BTTの作者さんのプラグイン開発用プロジェクトを利用して作りました。めちゃめちゃ感謝。
 
+Audirvanaで再生中の曲情報をTouchBarに表示するBTTプラグイン。メディア操作も可能。
+
 一応Audirvana以外のプレイヤーにも対応しているが不完全。
 
 # Install
