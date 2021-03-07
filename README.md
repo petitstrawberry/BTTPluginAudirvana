@@ -15,15 +15,14 @@ Audirvanaで再生中の曲情報をTouchBarに表示するBTTプラグイン。
 sudo spctl --master-disable
 ```
 3. BTTTouchBarPluginAudirvana.btttouchbarpluginを開いてBTTにインストール
-4. Gatekeeperを有効化（安全のためちゃんと元に戻しておきましょう）
+4. TouchBarのトリガー設定から タッチバープラグイン-> NowPlaying on Audirvana を選択する。（面倒ですが一度実行しないとOSに許可されないので...）
+5. Gatekeeperを有効化（安全のためちゃんと元に戻しておきましょう）
 ```shell
 sudo spctl --master-enable
 ```
 
 # How To Use それっぽいの
-TouchBarのトリガー設定から「NowPlaying on Audirvana」を選択する。
-
-ジェスチャー操作できます。触ったらわかる。トリガー起動（オン）！
+スワイプ、タップでジェスチャー操作できます。触ったらわかる。トリガー起動（オン）！
 
 # Credit
 
