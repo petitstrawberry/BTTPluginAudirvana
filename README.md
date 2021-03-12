@@ -23,6 +23,8 @@ sudo spctl --master-enable
 # How To Use それっぽいの
 スワイプ、タップでジェスチャー操作できます。触ったらわかる。トリガー起動（オン）！
 
+BTTのトリガー設定画面からSeekBarモードを有効にすることでNowPlayingウィジェットの代わりにSeekBarウィジェットが表示されます。
+
 # Credits
 
 - [BetterTouchToolPlugins](https://github.com/folivoraAI/BetterTouchToolPlugins)
@@ -41,7 +43,7 @@ MIT License
 
 ## swiftui-sliders
 MIT License
-
+  https://github.com/spacenation/swiftui-sliders/blob/master/LICENSE
 
 ## MusicPlayer
 Mozilla Public License Version 2.0
