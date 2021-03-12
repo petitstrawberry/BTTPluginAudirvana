@@ -9,17 +9,24 @@
 /* Begin PBXBuildFile section */
 		6F0216C725F33454002914E8 /* SwiftUIPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0216C625F33454002914E8 /* SwiftUIPreview.swift */; };
 		6F0216E725F34E71002914E8 /* SystemMediaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0216E625F34E71002914E8 /* SystemMediaView.swift */; };
-		6F16278A25F202FD009E5774 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16278925F202FD009E5774 /* ButtonView.swift */; };
+		6F16278A25F202FD009E5774 /* NowPlayingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16278925F202FD009E5774 /* NowPlayingView.swift */; };
 		6F1627AF25F21A38009E5774 /* MusicPlayer in Frameworks */ = {isa = PBXBuildFile; productRef = 6F1627AE25F21A38009E5774 /* MusicPlayer */; };
 		6F1627B125F21A38009E5774 /* LXMusicPlayer in Frameworks */ = {isa = PBXBuildFile; productRef = 6F1627B025F21A38009E5774 /* LXMusicPlayer */; };
 		6F1627B925F21A6B009E5774 /* LXMusicPlayer in Frameworks */ = {isa = PBXBuildFile; productRef = 6F1627B825F21A6B009E5774 /* LXMusicPlayer */; };
 		6F1627BB25F21A6D009E5774 /* MusicPlayer in Frameworks */ = {isa = PBXBuildFile; productRef = 6F1627BA25F21A6D009E5774 /* MusicPlayer */; };
 		6F1627C225F21A85009E5774 /* BTTPluginSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9454C4A22BE69BA00055860 /* BTTPluginSupport.framework */; };
 		6F1627C325F21A85009E5774 /* BTTPluginSupport.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A9454C4A22BE69BA00055860 /* BTTPluginSupport.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6F2CB9E425F742C900554356 /* SeekBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2CB9C125F741AA00554356 /* SeekBarView.swift */; };
+		6F2CB9F325F756FD00554356 /* Sliders in Frameworks */ = {isa = PBXBuildFile; productRef = 6F2CB9F225F756FD00554356 /* Sliders */; };
+		6F2CBA0825F8B95900554356 /* SeekBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2CB9C125F741AA00554356 /* SeekBarView.swift */; };
+		6F2CBA1225F8B99E00554356 /* Sliders in Frameworks */ = {isa = PBXBuildFile; productRef = 6F2CBA1125F8B99E00554356 /* Sliders */; };
+		6F2CBA1825F8BB3E00554356 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2CBA1725F8BB3E00554356 /* Configuration.swift */; };
 		6F5B932B25F3514300E2EE07 /* AudirvanaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5B932125F3510400E2EE07 /* AudirvanaView.swift */; };
 		6F5B933C25F3525600E2EE07 /* AudirvanaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5B932125F3510400E2EE07 /* AudirvanaView.swift */; };
-		6F5B934125F3525A00E2EE07 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16278925F202FD009E5774 /* ButtonView.swift */; };
+		6F5B934125F3525A00E2EE07 /* NowPlayingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16278925F202FD009E5774 /* NowPlayingView.swift */; };
 		6F5B934625F3526E00E2EE07 /* SystemMediaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0216E625F34E71002914E8 /* SystemMediaView.swift */; };
+		6F613F0F25F8D3DD008E4D43 /* AudirvanaSeekBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F613F0E25F8D3DD008E4D43 /* AudirvanaSeekBarView.swift */; };
+		6F613F1925F8D52B008E4D43 /* SystemMediaSeekBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F613F1825F8D52B008E4D43 /* SystemMediaSeekBarView.swift */; };
 		A9454BC322BE1E3300055860 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9454BC222BE1E3300055860 /* AppDelegate.m */; };
 		A9454BC622BE1E3300055860 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9454BC522BE1E3300055860 /* ViewController.m */; };
 		A9454BC822BE1E3500055860 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9454BC722BE1E3500055860 /* Assets.xcassets */; };
@@ -40,8 +47,6 @@
 		A9454C6822BE69C700055860 /* BTTFormConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = A9454C2822BE204300055860 /* BTTFormConstants.m */; };
 		A9454C6922BE69C700055860 /* BTTPluginFormItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A9454C2722BE204300055860 /* BTTPluginFormItem.m */; };
 		A9454C7622BE6B4F00055860 /* WindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9454C7522BE6B4F00055860 /* WindowController.m */; };
-		A9DC035223D4B59200C0E704 /* BTTPluginSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9454C4A22BE69BA00055860 /* BTTPluginSupport.framework */; };
-		A9DC035323D4B59200C0E704 /* BTTPluginSupport.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A9454C4A22BE69BA00055860 /* BTTPluginSupport.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,13 +99,6 @@
 			remoteGlobalIDString = A9454C4922BE69BA00055860;
 			remoteInfo = BTTPluginSupport;
 		};
-		A9DC035423D4B59200C0E704 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A9454BB622BE1E3300055860 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A9454C4922BE69BA00055860;
-			remoteInfo = BTTPluginSupport;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -126,24 +124,17 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A9DC035623D4B59200C0E704 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				A9DC035323D4B59200C0E704 /* BTTPluginSupport.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		6F0216C625F33454002914E8 /* SwiftUIPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIPreview.swift; sourceTree = "<group>"; };
 		6F0216E625F34E71002914E8 /* SystemMediaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemMediaView.swift; sourceTree = "<group>"; };
-		6F16278925F202FD009E5774 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		6F16278925F202FD009E5774 /* NowPlayingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingView.swift; sourceTree = "<group>"; };
+		6F2CB9C125F741AA00554356 /* SeekBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeekBarView.swift; sourceTree = "<group>"; };
+		6F2CBA1725F8BB3E00554356 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		6F5B932125F3510400E2EE07 /* AudirvanaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudirvanaView.swift; sourceTree = "<group>"; };
+		6F613F0E25F8D3DD008E4D43 /* AudirvanaSeekBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudirvanaSeekBarView.swift; sourceTree = "<group>"; };
+		6F613F1825F8D52B008E4D43 /* SystemMediaSeekBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemMediaSeekBarView.swift; sourceTree = "<group>"; };
 		A9454BBE22BE1E3300055860 /* BetterTouchToolPluginDevelopment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetterTouchToolPluginDevelopment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9454BC122BE1E3300055860 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A9454BC222BE1E3300055860 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -182,7 +173,6 @@
 		A9454C5B22BE69BA00055860 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9454C7422BE6B4F00055860 /* WindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WindowController.h; sourceTree = "<group>"; };
 		A9454C7522BE6B4F00055860 /* WindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WindowController.m; sourceTree = "<group>"; };
-		A9DC034523D4AEB900C0E704 /* BTTDisplayNotificationActionPlugin.bttactionplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BTTDisplayNotificationActionPlugin.bttactionplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F1627B125F21A38009E5774 /* LXMusicPlayer in Frameworks */,
+				6F2CB9F325F756FD00554356 /* Sliders in Frameworks */,
 				A9454C5F22BE69BA00055860 /* BTTPluginSupport.framework in Frameworks */,
 				6F1627AF25F21A38009E5774 /* MusicPlayer in Frameworks */,
 			);
@@ -215,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F1627C225F21A85009E5774 /* BTTPluginSupport.framework in Frameworks */,
+				6F2CBA1225F8B99E00554356 /* Sliders in Frameworks */,
 				6F1627B925F21A6B009E5774 /* LXMusicPlayer in Frameworks */,
 				6F1627BB25F21A6D009E5774 /* MusicPlayer in Frameworks */,
 			);
@@ -235,24 +227,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A9DC034223D4AEB900C0E704 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A9DC035223D4B59200C0E704 /* BTTPluginSupport.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6F2CB9FE25F8B7D900554356 /* SeekBar */ = {
+			isa = PBXGroup;
+			children = (
+				6F2CB9C125F741AA00554356 /* SeekBarView.swift */,
+				6F613F0E25F8D3DD008E4D43 /* AudirvanaSeekBarView.swift */,
+				6F613F1825F8D52B008E4D43 /* SystemMediaSeekBarView.swift */,
+			);
+			path = SeekBar;
+			sourceTree = "<group>";
+		};
+		6F2CBA0325F8B8F500554356 /* NowPlaying */ = {
+			isa = PBXGroup;
+			children = (
+				6F5B932125F3510400E2EE07 /* AudirvanaView.swift */,
+				6F0216E625F34E71002914E8 /* SystemMediaView.swift */,
+				6F16278925F202FD009E5774 /* NowPlayingView.swift */,
+			);
+			path = NowPlaying;
+			sourceTree = "<group>";
+		};
 		A9454BB522BE1E3300055860 = {
 			isa = PBXGroup;
 			children = (
+				A9454C0022BE1E9900055860 /* BTTTouchBarPluginAudirvana */,
 				A9454BC022BE1E3300055860 /* BetterTouchToolPluginDevelopment */,
 				A9454BD722BE1E3500055860 /* BetterTouchToolPluginDevelopmentTests */,
 				A9454BE222BE1E3500055860 /* BetterTouchToolPluginDevelopmentUITests */,
-				A9454C0022BE1E9900055860 /* BTTTouchBarPluginAudirvana */,
 				A9454C4B22BE69BA00055860 /* BTTPluginSupport */,
 				A9454C5822BE69BA00055860 /* BTTPluginSupportTests */,
 				A9454BBF22BE1E3300055860 /* Products */,
@@ -269,7 +273,6 @@
 				A9454BFF22BE1E9900055860 /* BTTTouchBarPluginAudirvana.btttouchbarplugin */,
 				A9454C4A22BE69BA00055860 /* BTTPluginSupport.framework */,
 				A9454C5222BE69BA00055860 /* BTTPluginSupportTests.xctest */,
-				A9DC034523D4AEB900C0E704 /* BTTDisplayNotificationActionPlugin.bttactionplugin */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -317,15 +320,15 @@
 		A9454C0022BE1E9900055860 /* BTTTouchBarPluginAudirvana */ = {
 			isa = PBXGroup;
 			children = (
+				6F2CBA0325F8B8F500554356 /* NowPlaying */,
+				6F2CB9FE25F8B7D900554356 /* SeekBar */,
 				A9454C3A22BE24D700055860 /* icon.png */,
 				A9454C3B22BE24D700055860 /* icon@2x.png */,
 				A9454C0122BE1E9900055860 /* Info.plist */,
 				A9454C1422BE1F9100055860 /* PluginMain.swift */,
-				6F16278925F202FD009E5774 /* ButtonView.swift */,
-				6F0216E625F34E71002914E8 /* SystemMediaView.swift */,
-				6F5B932125F3510400E2EE07 /* AudirvanaView.swift */,
 				A9454C3422BE219400055860 /* PluginViewController.swift */,
 				A9454C1322BE1F9100055860 /* BTTTouchBarPluginAudirvana-Bridging-Header.h */,
+				6F2CBA1725F8BB3E00554356 /* Configuration.swift */,
 			);
 			path = BTTTouchBarPluginAudirvana;
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 			packageProductDependencies = (
 				6F1627AE25F21A38009E5774 /* MusicPlayer */,
 				6F1627B025F21A38009E5774 /* LXMusicPlayer */,
+				6F2CB9F225F756FD00554356 /* Sliders */,
 			);
 			productName = BetterTouchToolPluginDevelopment;
 			productReference = A9454BBE22BE1E3300055860 /* BetterTouchToolPluginDevelopment.app */;
@@ -451,6 +455,7 @@
 			packageProductDependencies = (
 				6F1627B825F21A6B009E5774 /* LXMusicPlayer */,
 				6F1627BA25F21A6D009E5774 /* MusicPlayer */,
+				6F2CBA1125F8B99E00554356 /* Sliders */,
 			);
 			productName = BTTTouchBarPluginSampleCustomView;
 			productReference = A9454BFF22BE1E9900055860 /* BTTTouchBarPluginAudirvana.btttouchbarplugin */;
@@ -493,25 +498,6 @@
 			productReference = A9454C5222BE69BA00055860 /* BTTPluginSupportTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		A9DC034423D4AEB900C0E704 /* BTTDisplayNotificationActionPlugin */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A9DC034823D4AEB900C0E704 /* Build configuration list for PBXNativeTarget "BTTDisplayNotificationActionPlugin" */;
-			buildPhases = (
-				A9DC034123D4AEB900C0E704 /* Sources */,
-				A9DC034223D4AEB900C0E704 /* Frameworks */,
-				A9DC034323D4AEB900C0E704 /* Resources */,
-				A9DC035623D4B59200C0E704 /* Embed Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A9DC035523D4B59200C0E704 /* PBXTargetDependency */,
-			);
-			name = BTTDisplayNotificationActionPlugin;
-			productName = BTTDisplayNotificationActionPlugin;
-			productReference = A9DC034523D4AEB900C0E704 /* BTTDisplayNotificationActionPlugin.bttactionplugin */;
-			productType = "com.apple.product-type.bundle";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -549,10 +535,6 @@
 						CreatedOnToolsVersion = 10.2.1;
 						TestTargetID = A9454BBD22BE1E3300055860;
 					};
-					A9DC034423D4AEB900C0E704 = {
-						CreatedOnToolsVersion = 11.3.1;
-						LastSwiftMigration = 1130;
-					};
 				};
 			};
 			buildConfigurationList = A9454BB922BE1E3300055860 /* Build configuration list for PBXProject "BetterTouchToolPluginDevelopment" */;
@@ -566,6 +548,7 @@
 			mainGroup = A9454BB522BE1E3300055860;
 			packageReferences = (
 				6F1627AD25F21A38009E5774 /* XCRemoteSwiftPackageReference "MusicPlayer" */,
+				6F2CB9F125F756FD00554356 /* XCRemoteSwiftPackageReference "swiftui-sliders" */,
 			);
 			productRefGroup = A9454BBF22BE1E3300055860 /* Products */;
 			projectDirPath = "";
@@ -577,7 +560,6 @@
 				A9454BFE22BE1E9900055860 /* BTTTouchBarPluginAudirvana */,
 				A9454C4922BE69BA00055860 /* BTTPluginSupport */,
 				A9454C5122BE69BA00055860 /* BTTPluginSupportTests */,
-				A9DC034423D4AEB900C0E704 /* BTTDisplayNotificationActionPlugin */,
 			);
 		};
 /* End PBXProject section */
@@ -629,13 +611,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A9DC034323D4AEB900C0E704 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -646,7 +621,8 @@
 				A9454C7622BE6B4F00055860 /* WindowController.m in Sources */,
 				A9454BC622BE1E3300055860 /* ViewController.m in Sources */,
 				6F5B934625F3526E00E2EE07 /* SystemMediaView.swift in Sources */,
-				6F5B934125F3525A00E2EE07 /* ButtonView.swift in Sources */,
+				6F5B934125F3525A00E2EE07 /* NowPlayingView.swift in Sources */,
+				6F2CB9E425F742C900554356 /* SeekBarView.swift in Sources */,
 				6F0216C725F33454002914E8 /* SwiftUIPreview.swift in Sources */,
 				A9454BCE22BE1E3500055860 /* main.m in Sources */,
 				A9454BC322BE1E3300055860 /* AppDelegate.m in Sources */,
@@ -677,8 +653,12 @@
 			files = (
 				A9454C3522BE219400055860 /* PluginViewController.swift in Sources */,
 				6F0216E725F34E71002914E8 /* SystemMediaView.swift in Sources */,
+				6F2CBA1825F8BB3E00554356 /* Configuration.swift in Sources */,
+				6F613F1925F8D52B008E4D43 /* SystemMediaSeekBarView.swift in Sources */,
+				6F2CBA0825F8B95900554356 /* SeekBarView.swift in Sources */,
+				6F613F0F25F8D3DD008E4D43 /* AudirvanaSeekBarView.swift in Sources */,
 				A9454C1522BE1F9100055860 /* PluginMain.swift in Sources */,
-				6F16278A25F202FD009E5774 /* ButtonView.swift in Sources */,
+				6F16278A25F202FD009E5774 /* NowPlayingView.swift in Sources */,
 				6F5B932B25F3514300E2EE07 /* AudirvanaView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -697,13 +677,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9454C5A22BE69BA00055860 /* BTTPluginSupportTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A9DC034123D4AEB900C0E704 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -744,11 +717,6 @@
 			isa = PBXTargetDependency;
 			target = A9454C4922BE69BA00055860 /* BTTPluginSupport */;
 			targetProxy = A9454C6C22BE6A0D00055860 /* PBXContainerItemProxy */;
-		};
-		A9DC035523D4B59200C0E704 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A9454C4922BE69BA00055860 /* BTTPluginSupport */;
-			targetProxy = A9DC035423D4B59200C0E704 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1135,55 +1103,6 @@
 			};
 			name = Release;
 		};
-		A9DC034923D4AEB900C0E704 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = BTTDisplayNotificationActionPlugin/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = com.folivora.BTTDisplayNotificationActionPlugin;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "BTTDisplayNotificationActionPlugin/BTTDisplayNotificationActionPlugin-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
-				WRAPPER_EXTENSION = bttactionplugin;
-			};
-			name = Debug;
-		};
-		A9DC034A23D4AEB900C0E704 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = BTTDisplayNotificationActionPlugin/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = com.folivora.BTTDisplayNotificationActionPlugin;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "BTTDisplayNotificationActionPlugin/BTTDisplayNotificationActionPlugin-Bridging-Header.h";
-				SWIFT_VERSION = 5.0;
-				WRAPPER_EXTENSION = bttactionplugin;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1250,15 +1169,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A9DC034823D4AEB900C0E704 /* Build configuration list for PBXNativeTarget "BTTDisplayNotificationActionPlugin" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A9DC034923D4AEB900C0E704 /* Debug */,
-				A9DC034A23D4AEB900C0E704 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -1268,6 +1178,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 0.7.0;
+			};
+		};
+		6F2CB9F125F756FD00554356 /* XCRemoteSwiftPackageReference "swiftui-sliders" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/spacenation/swiftui-sliders.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -1292,6 +1210,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6F1627AD25F21A38009E5774 /* XCRemoteSwiftPackageReference "MusicPlayer" */;
 			productName = MusicPlayer;
+		};
+		6F2CB9F225F756FD00554356 /* Sliders */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6F2CB9F125F756FD00554356 /* XCRemoteSwiftPackageReference "swiftui-sliders" */;
+			productName = Sliders;
+		};
+		6F2CBA1125F8B99E00554356 /* Sliders */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6F2CB9F125F756FD00554356 /* XCRemoteSwiftPackageReference "swiftui-sliders" */;
+			productName = Sliders;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

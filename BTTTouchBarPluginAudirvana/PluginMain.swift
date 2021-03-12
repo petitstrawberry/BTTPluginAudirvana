@@ -20,8 +20,9 @@ import AppKit
      */
     func touchBarViewController() -> NSViewController? {
         if(self.customVC == nil) {
-            self.customVC = PluginViewController.init();
-            self.configure();
+           
+            self.customVC = PluginViewController.init()
+            self.configure()
 
         }
         return self.customVC;
@@ -29,8 +30,9 @@ import AppKit
 
 
     func configure() {
-        if((self.configurationValues["plugin_var_widgetName"]) != nil) {
-            // do something to the view
+        if((self.configurationValues["plugin_var_isSeekBarMode"]) != nil) {
+            let mode = self.configurationValues["plugin_var_isSeekBarMode"]
+            Configuration.shared.isSeekBarMode = mode as! Bool
         }
     }
 
@@ -39,13 +41,39 @@ import AppKit
 
         // here we just create a text field, we will receive the
         // current value in didReceiveNewConfigurationValues
-        let item = BTTPluginFormItem.init();
-
-        return item;
+        let groupNowPlaying = BTTPluginFormItem.init()
+        groupNowPlaying.formFieldType = BTTFormTypeFormGroup
+        
+//        let modeMenu = BTTPluginFormItem.init()
+//        modeMenu.formFieldType = BTTFormTypePopupButton
+//        modeMenu.formFieldID = "plugin_var_mode"
+//        modeMenu.formLabel1 = "表示モード"
+//
+//        let itemNowPlaying = BTTPluginFormItem.init()
+//        itemNowPlaying.formFieldType = BTTFormTypeTitleField
+//        itemNowPlaying.formFieldID = "plugin_var_nowplaying"
+//        itemNowPlaying.formLabel1 = "NowPlaying"
+//
+//        let itemSeekBar = BTTPluginFormItem.init()
+//        itemSeekBar.formFieldType = BTTFormTypeTitleField
+//        itemSeekBar.formFieldID = "plugin_var_seekbar"
+//        itemSeekBar.formLabel1 = "SeekBar"
+//
+//        modeMenu.formOptions = [itemNowPlaying, itemSeekBar]
+        
+        
+        let checkbox = BTTPluginFormItem.init()
+        checkbox.formFieldType = BTTFormTypeCheckbox
+        checkbox.formFieldID = "plugin_var_isSeekBarMode"
+        checkbox.formLabel1 = "SeekBarとして表示 (SeekBar Mode)"
+        
+        groupNowPlaying.formOptions = [checkbox]
+        
+        return groupNowPlaying
     }
 
     func didReceiveNewConfigurationValues(_ configurationValues: [AnyHashable : Any]) {
-        self.configurationValues = configurationValues;
+        self.configurationValues = configurationValues
         if (self.customVC != nil) {
             self.configure();
         }
@@ -53,7 +81,7 @@ import AppKit
 
     // this will tell BTT to execute the actions the user assigned to this widget
     @objc func executeAssignedBTTActions() {
-        self.delegate?.executeAssignedBTTActions(self);
+        self.delegate?.executeAssignedBTTActions(self)
     }
 
 }

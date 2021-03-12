@@ -1,5 +1,5 @@
 //
-//  ButtonView.swift
+//  NowPlayingView.swift
 //  BTTTouchBarPluginAudirvana
 //
 //  Created by プチいちご on 2021/03/05.
@@ -8,7 +8,7 @@
 import SwiftUI
 import MusicPlayer
 
-struct ButtonView: View {
+struct NowPlayingView: View {
     @EnvironmentObject var player: MusicPlayers.Scriptable
     @EnvironmentObject var systemPlayer: MusicPlayers.SystemMedia
     
@@ -16,7 +16,6 @@ struct ButtonView: View {
         GeometryReader { geometry in
             if isSystemMediaPlaying() {
                 SystemMediaView(geometry: geometry)
-                    
                     
             }else {
                 AudirvanaView(geometry: geometry)
@@ -36,7 +35,7 @@ struct ButtonView: View {
 
 struct SwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
-        ButtonView()
+        NowPlayingView()
     }
 }
 

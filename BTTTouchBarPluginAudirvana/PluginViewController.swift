@@ -13,15 +13,28 @@ class PluginViewController: NSViewController {
     
     
     override func loadView() {
-        var buttonView: some View {
-            ButtonView()
-                .environmentObject(MusicPlayers.Scriptable(name: .audirvana)!)
-                .environmentObject(MusicPlayers.SystemMedia()!)
+        var widgetView: some View {
+            
+            Group {
+                if !Configuration.shared.isSeekBarMode {
+                    NowPlayingView()
+                        .environmentObject(MusicPlayers.Scriptable(name: .audirvana)!)
+                        .environmentObject(MusicPlayers.SystemMedia()!)
+                }else {
+                    SeekBarView()
+                        .environmentObject(MusicPlayers.Scriptable(name: .audirvana)!)
+                        .environmentObject(MusicPlayers.SystemMedia()!)
+                }
+            }
         }
         self.view = NSHostingView(
-            rootView: buttonView
+            rootView: widgetView
         )
-        self.view.setFrameSize(NSSize(width: 140, height: 30))
+        if !Configuration.shared.isSeekBarMode {
+            self.view.setFrameSize(NSSize(width: 140, height: 30))
+        }else {
+            self.view.setFrameSize(NSSize(width: 440, height: 30))
+        }
     }
 
     override func viewDidLoad() {

@@ -3,7 +3,6 @@
 //  BetterTouchToolPluginDevelopment
 //
 //  Created by プチいちご on 2021/03/06.
-//  Copyright © 2021 Andreas Hegenberg. All rights reserved.
 //
 
 import SwiftUI
