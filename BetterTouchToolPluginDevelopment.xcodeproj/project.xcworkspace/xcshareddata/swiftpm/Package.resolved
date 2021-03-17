@@ -20,6 +20,15 @@
         }
       },
       {
+        "package": "Pailead",
+        "repositoryURL": "https://github.com/pducks32/Pailead.git",
+        "state": {
+          "branch": null,
+          "revision": "c6ce6877a7c34f32f0ad37e4efb1832e0bebf8e7",
+          "version": "1.4.1"
+        }
+      },
+      {
         "package": "Sliders",
         "repositoryURL": "https://github.com/spacenation/swiftui-sliders.git",
         "state": {

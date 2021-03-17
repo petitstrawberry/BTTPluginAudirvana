@@ -12,20 +12,20 @@ import Sliders
 struct SeekBarView: View {
     @EnvironmentObject var player: MusicPlayers.Scriptable
     @EnvironmentObject var systemPlayer: MusicPlayers.Scriptable
-    
+
     var body: some View {
         GeometryReader { geometry in
             if isSystemMediaPlaying() {
                 SystemMediaSeekBarView(geometry: geometry)
-                    
-                    
+
+
             }else {
                 AudirvanaSeekBarView(geometry: geometry)
             }
-            
+
         }
     }
-    
+
     func isSystemMediaPlaying() -> Bool {
         return player.playbackState == .stopped
     }

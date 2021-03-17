@@ -8,19 +8,22 @@
 import SwiftUI
 import MusicPlayer
 import Sliders
+import Pailead
 
 struct SystemMediaSeekBarView: View {
     @State var geometry: GeometryProxy
     @EnvironmentObject var player: MusicPlayers.SystemMedia
     @State var position: Double = 0
     @State var sliderState: Bool = false
+    @State var barColor: NSColor = NSColor.init(red: 0.4, green: 0.5, blue: 0.9, alpha: 1)
+
     var positionSec: Double {
         position * (player.currentTrack?.duration ?? 0)
     }
     let timer = Timer.publish(every: 1.0, on: .current, in: .common).autoconnect()
-    
+
     var body: some View {
-        
+
         HStack {
             Text(timeFormatter(sec: Int(positionSec)))
                 .font(Font.caption.monospacedDigit())
@@ -33,10 +36,12 @@ struct SystemMediaSeekBarView: View {
             .valueSliderStyle(
                 HorizontalValueSliderStyle(
                     track: HorizontalValueTrack(
-                        view: Color.blue.opacity(0.7),
-                        mask: Rectangle())
+                        view: Color(barColor),
+                        mask: Rectangle().cornerRadius(8.0).clipped())
+                        .cornerRadius(8.0)
+                        .clipped()
                         .frame(height: 16, alignment: .center)
-                        .background(Rectangle().foregroundColor(Color.secondary.opacity(0.4))),
+                        .background(Rectangle().foregroundColor(Color.secondary.opacity(0.4)).cornerRadius(8.0)),
                     thumbSize: CGSize(width: 0, height: 0),
                     thumbInteractiveSize: CGSize(width: 32, height: 32),
                     options: .interactiveTrack
@@ -55,18 +60,30 @@ struct SystemMediaSeekBarView: View {
             }
         }
         )
-        
+
         .frame(width: geometry.size.width, height: geometry.size.height, alignment: .leading)
         .clipped()
-        
+        .trigger(trigger: player.currentTrack) {
+            barColor = NSColor.init(red: 0.4, green: 0.5, blue: 0.9, alpha: 1)
+            if player.currentTrack != nil && player.currentTrack?.artwork != nil {
+                Pailead.extractPalette(from: player.currentTrack!.artwork!) { palette in
+                    if palette.lightMutedSwatch != nil{
+                        barColor = palette.lightMutedSwatch!.color
+                    }else if palette.vibrantSwatch != nil {
+                        barColor = palette.vibrantSwatch!.color
+                    }
+                }
+            }
+        }
+
     }
-    
+
     private func timeFormatter(sec: Int) -> String {
-        
+
         let h = sec / 3600 % 24
         let m = sec / 60 % 60
         let s = sec % 60
-        
+
         if h == 0 {
             return String(format: "%d:%02d", m, s)
         } else {

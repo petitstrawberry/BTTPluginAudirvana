@@ -27,6 +27,7 @@
 		6F5B934625F3526E00E2EE07 /* SystemMediaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0216E625F34E71002914E8 /* SystemMediaView.swift */; };
 		6F613F0F25F8D3DD008E4D43 /* AudirvanaSeekBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F613F0E25F8D3DD008E4D43 /* AudirvanaSeekBarView.swift */; };
 		6F613F1925F8D52B008E4D43 /* SystemMediaSeekBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F613F1825F8D52B008E4D43 /* SystemMediaSeekBarView.swift */; };
+		6FD9E1ED260233BE00109A63 /* Pailead in Frameworks */ = {isa = PBXBuildFile; productRef = 6FD9E1EC260233BE00109A63 /* Pailead */; };
 		A9454BC322BE1E3300055860 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9454BC222BE1E3300055860 /* AppDelegate.m */; };
 		A9454BC622BE1E3300055860 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9454BC522BE1E3300055860 /* ViewController.m */; };
 		A9454BC822BE1E3500055860 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9454BC722BE1E3500055860 /* Assets.xcassets */; };
@@ -209,6 +210,7 @@
 				6F2CBA1225F8B99E00554356 /* Sliders in Frameworks */,
 				6F1627B925F21A6B009E5774 /* LXMusicPlayer in Frameworks */,
 				6F1627BB25F21A6D009E5774 /* MusicPlayer in Frameworks */,
+				6FD9E1ED260233BE00109A63 /* Pailead in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +458,7 @@
 				6F1627B825F21A6B009E5774 /* LXMusicPlayer */,
 				6F1627BA25F21A6D009E5774 /* MusicPlayer */,
 				6F2CBA1125F8B99E00554356 /* Sliders */,
+				6FD9E1EC260233BE00109A63 /* Pailead */,
 			);
 			productName = BTTTouchBarPluginSampleCustomView;
 			productReference = A9454BFF22BE1E9900055860 /* BTTTouchBarPluginAudirvana.btttouchbarplugin */;
@@ -549,6 +552,7 @@
 			packageReferences = (
 				6F1627AD25F21A38009E5774 /* XCRemoteSwiftPackageReference "MusicPlayer" */,
 				6F2CB9F125F756FD00554356 /* XCRemoteSwiftPackageReference "swiftui-sliders" */,
+				6FD9E1EB260233BE00109A63 /* XCRemoteSwiftPackageReference "Pailead" */,
 			);
 			productRefGroup = A9454BBF22BE1E3300055860 /* Products */;
 			projectDirPath = "";
@@ -1188,6 +1192,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		6FD9E1EB260233BE00109A63 /* XCRemoteSwiftPackageReference "Pailead" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pducks32/Pailead.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1220,6 +1232,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6F2CB9F125F756FD00554356 /* XCRemoteSwiftPackageReference "swiftui-sliders" */;
 			productName = Sliders;
+		};
+		6FD9E1EC260233BE00109A63 /* Pailead */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6FD9E1EB260233BE00109A63 /* XCRemoteSwiftPackageReference "Pailead" */;
+			productName = Pailead;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
