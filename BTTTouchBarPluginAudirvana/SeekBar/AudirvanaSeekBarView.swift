@@ -48,8 +48,10 @@ struct AudirvanaSeekBarView: View {
         .padding()
         .onReceive(timer, perform: { _ in
             if !sliderState {
-                player.updatePlayerState()
-                position = player.playbackState.time / ( player.currentTrack?.duration ?? 1)
+                DispatchQueue.global().async {
+                    player.updatePlayerState()
+                    position = player.playbackState.time / ( player.currentTrack?.duration ?? 1)
+                }
             }
         }
         )
