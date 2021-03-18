@@ -1,8 +1,8 @@
 //
-//  AudirvanaSeekBarView.swift
+//  AppleMusicSeekBarView.swift
 //  BTTTouchBarPluginAudirvana
 //
-//  Created by プチいちご on 2021/03/10.
+//  Created by プチいちご on 2021/03/18.
 //
 
 import SwiftUI
@@ -10,9 +10,9 @@ import MusicPlayer
 import Sliders
 import Pailead
 
-struct AudirvanaSeekBarView: View {
+struct AppleMusicSeekBarView: View {
     @State var geometry: GeometryProxy
-    @ObservedObject var player = MusicPlayers.Scriptable(name: .audirvana)!
+    @ObservedObject var player = MusicPlayers.Scriptable(name: .appleMusic)!
     @State var position: Double = 0
     @State var sliderState: Bool = false
     @State var barColor: NSColor = NSColor.init(red: 0.4, green: 0.5, blue: 0.9, alpha: 1)
@@ -20,9 +20,9 @@ struct AudirvanaSeekBarView: View {
         position * (player.currentTrack?.duration ?? 0)
     }
     let timer = Timer.publish(every: 1.0, on: .current, in: .common).autoconnect()
-    
+
     var body: some View {
-        
+
         HStack {
             Text(timeFormatter(sec: Int(positionSec)))
                 .font(Font.caption.monospacedDigit())
@@ -53,19 +53,18 @@ struct AudirvanaSeekBarView: View {
         .onReceive(timer, perform: { _ in
             if !sliderState {
                 DispatchQueue.global().async {
-                    if  player.playbackState.isPlaying {
+                    if player.playbackState.isPlaying {
                         player.updatePlayerState()
-                        if player.currentTrack?.duration != 0 {
-                            position = player.playbackState.time / ( player.currentTrack?.duration ?? 1)
-                        }else {
-                            position = 0
-                        }
+                    }
+                    if player.currentTrack?.duration != 0 {
+                        position = player.playbackState.time / ( player.currentTrack?.duration ?? 1)
+                    }else {
+                        position = 0
                     }
                 }
             }
         }
         )
-        
         .frame(width: geometry.size.width, height: geometry.size.height, alignment: .leading)
         .clipped()
         .trigger(trigger: player.currentTrack) {
@@ -81,15 +80,13 @@ struct AudirvanaSeekBarView: View {
             }
         }
     }
-    
-    
-    
+
     private func timeFormatter(sec: Int) -> String {
-        
+
         let h = sec / 3600 % 24
         let m = sec / 60 % 60
         let s = sec % 60
-        
+
         if h == 0 {
             return String(format: "%d:%02d", m, s)
         } else {
@@ -97,6 +94,5 @@ struct AudirvanaSeekBarView: View {
         }
     }
 }
-
 
 

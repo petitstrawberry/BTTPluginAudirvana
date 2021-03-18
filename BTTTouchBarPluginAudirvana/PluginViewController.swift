@@ -18,12 +18,8 @@ class PluginViewController: NSViewController {
             Group {
                 if !Configuration.shared.isSeekBarMode {
                     NowPlayingView()
-                        .environmentObject(MusicPlayers.Scriptable(name: .audirvana)!)
-                        .environmentObject(MusicPlayers.SystemMedia()!)
                 }else {
                     SeekBarView()
-                        .environmentObject(MusicPlayers.Scriptable(name: .audirvana)!)
-                        .environmentObject(MusicPlayers.SystemMedia()!)
                 }
             }
         }

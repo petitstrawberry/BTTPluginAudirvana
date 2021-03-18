@@ -1,8 +1,8 @@
 //
-//  AudirvanaSeekBarView.swift
+//  SpotifySeekBarView.swift
 //  BTTTouchBarPluginAudirvana
 //
-//  Created by プチいちご on 2021/03/10.
+//  Created by プチいちご on 2021/03/18.
 //
 
 import SwiftUI
@@ -10,14 +10,14 @@ import MusicPlayer
 import Sliders
 import Pailead
 
-struct AudirvanaSeekBarView: View {
+struct SpotifySeekBarView: View {
     @State var geometry: GeometryProxy
-    @ObservedObject var player = MusicPlayers.Scriptable(name: .audirvana)!
+    @ObservedObject var player = MusicPlayers.Scriptable(name: .spotify)!
     @State var position: Double = 0
     @State var sliderState: Bool = false
     @State var barColor: NSColor = NSColor.init(red: 0.4, green: 0.5, blue: 0.9, alpha: 1)
     var positionSec: Double {
-        position * (player.currentTrack?.duration ?? 0)
+        position * (player.currentTrack?.duration ?? 0) / 1000
     }
     let timer = Timer.publish(every: 1.0, on: .current, in: .common).autoconnect()
     
@@ -29,7 +29,7 @@ struct AudirvanaSeekBarView: View {
             ValueSlider(value: $position, onEditingChanged: {flag in
                 sliderState = flag
                 if !flag {
-                    player.playbackTime = position * (player.currentTrack?.duration ?? 1)
+                    player.playbackTime = position * (player.currentTrack?.duration ?? 1) / 1000
                 }
             })
             .valueSliderStyle(
@@ -46,21 +46,16 @@ struct AudirvanaSeekBarView: View {
                     options: .interactiveTrack
                 )
             )
-            Text(timeFormatter(sec: Int((player.currentTrack?.duration ?? 0) - positionSec)))
+            Text(timeFormatter(sec: Int((player.currentTrack?.duration ?? 0) / 1000 - positionSec)))
                 .font(Font.caption.monospacedDigit())
         }
         .padding()
         .onReceive(timer, perform: { _ in
             if !sliderState {
-                DispatchQueue.global().async {
-                    if  player.playbackState.isPlaying {
-                        player.updatePlayerState()
-                        if player.currentTrack?.duration != 0 {
-                            position = player.playbackState.time / ( player.currentTrack?.duration ?? 1)
-                        }else {
-                            position = 0
-                        }
-                    }
+                if player.currentTrack?.duration != 0 {
+                    position = player.playbackState.time / ( player.currentTrack?.duration ?? 1) * 1000
+                }else {
+                    position = 0
                 }
             }
         }
@@ -81,8 +76,6 @@ struct AudirvanaSeekBarView: View {
             }
         }
     }
-    
-    
     
     private func timeFormatter(sec: Int) -> String {
         

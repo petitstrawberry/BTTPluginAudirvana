@@ -9,27 +9,40 @@ import SwiftUI
 import MusicPlayer
 
 struct NowPlayingView: View {
-    @EnvironmentObject var player: MusicPlayers.Scriptable
-    @EnvironmentObject var systemPlayer: MusicPlayers.SystemMedia
+    @ObservedObject var audirvana = MusicPlayers.Scriptable(name: .audirvana)!
+    @ObservedObject var spotify = MusicPlayers.Scriptable(name: .spotify)!
+    @ObservedObject var appleMusic = MusicPlayers.Scriptable(name: .appleMusic)!
+    @ObservedObject var systemPlayer = MusicPlayers.SystemMedia()!
     
     var body: some View {
         GeometryReader { geometry in
-            if isSystemMediaPlaying() {
-                SystemMediaView(geometry: geometry)
-                    
+            if !isAudirvanaPlaying() {
+                let player = getPlayingPlayer(players: [spotify, appleMusic])
+                
+                if player?.name == .spotify {
+                    SpotifyView(geometry: geometry)
+                }else if player?.name == .appleMusic {
+                    AppleMusicView(geometry: geometry)
+                }else if Configuration.shared.isSystemMediaMode {
+                    SystemMediaView(geometry: geometry)
+                }else {
+                    AudirvanaView(geometry: geometry)
+                }
             }else {
                 AudirvanaView(geometry: geometry)
             }
             
         }
         .cornerRadius(6.0)
-        //.border(Color.red, width: 1)
     }
-        
-    func isSystemMediaPlaying() -> Bool {
-        return player.playbackState == .stopped && systemPlayer.currentTrack != nil
+    
+    func isAudirvanaPlaying() -> Bool {
+        if !isRunningApp(name: "Audirvana") {
+            return false
+        }
+        return !(audirvana.playbackState == .stopped)// && otherPlayer.currentTrack != nil)
     }
-
+    
     
 }
 

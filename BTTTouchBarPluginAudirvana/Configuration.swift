@@ -10,4 +10,5 @@ class Configuration {
     private init() {}
     
     public var isSeekBarMode: Bool = false
+    public var isSystemMediaMode: Bool = false
 }

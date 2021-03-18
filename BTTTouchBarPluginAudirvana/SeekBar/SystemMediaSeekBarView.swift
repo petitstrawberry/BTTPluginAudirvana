@@ -12,7 +12,7 @@ import Pailead
 
 struct SystemMediaSeekBarView: View {
     @State var geometry: GeometryProxy
-    @EnvironmentObject var player: MusicPlayers.SystemMedia
+    @ObservedObject var player = MusicPlayers.SystemMedia()!
     @State var position: Double = 0
     @State var sliderState: Bool = false
     @State var barColor: NSColor = NSColor.init(red: 0.4, green: 0.5, blue: 0.9, alpha: 1)
@@ -54,8 +54,14 @@ struct SystemMediaSeekBarView: View {
         .onReceive(timer, perform: { _ in
             if !sliderState {
                 DispatchQueue.global().async {
-                    player.updatePlayerState()
-                    position = player.playbackState.time / ( player.currentTrack?.duration ?? 1)
+                    if player.playbackState.isPlaying {
+                        player.updatePlayerState()
+                    }
+                    if player.currentTrack?.duration != 0 {
+                        position = player.playbackState.time / ( player.currentTrack?.duration ?? 1)
+                    }else {
+                        position = 0
+                    }
                 }
             }
         }

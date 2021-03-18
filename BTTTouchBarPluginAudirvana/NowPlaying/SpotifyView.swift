@@ -1,22 +1,20 @@
 //
-//  SystemMediaView.swift
+//  SpotifyView.swift
 //  BTTTouchBarPluginAudirvana
 //
-//  Created by プチいちご on 2021/03/06.
+//  Created by プチいちご on 2021/03/18.
 //
 
 import SwiftUI
 import MusicPlayer
 
-struct SystemMediaView: View {
+struct SpotifyView: View {
     @State var geometry: GeometryProxy
-    @ObservedObject var player = MusicPlayers.SystemMedia()!
-
+    @ObservedObject var player = MusicPlayers.Scriptable(name: .spotify)!
     @State var backgroundColor: NSColor = .controlColor
-
     @State var tapBeginTime: Date = Date()
     @State var isTap: Bool = false
-
+    
     var gesture: some Gesture {
         DragGesture(minimumDistance: 0.0)
             .onChanged(){ value in
@@ -98,3 +96,4 @@ struct SystemMediaView: View {
         .gesture(gesture)
     }
 }
+
