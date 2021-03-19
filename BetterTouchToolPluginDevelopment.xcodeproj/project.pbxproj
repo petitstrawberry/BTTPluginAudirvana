@@ -28,10 +28,6 @@
 		6FD9E1ED260233BE00109A63 /* Pailead in Frameworks */ = {isa = PBXBuildFile; productRef = 6FD9E1EC260233BE00109A63 /* Pailead */; };
 		6FD9E1FF2602353D00109A63 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD9E1FE2602353D00109A63 /* ViewExtension.swift */; };
 		6FD9E2302603197B00109A63 /* BTTTouchBarPluginAudirvana.btttouchbarplugin in Resources */ = {isa = PBXBuildFile; fileRef = A9454BFF22BE1E9900055860 /* BTTTouchBarPluginAudirvana.btttouchbarplugin */; };
-		6FD9E23A2603205400109A63 /* SpotifyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD9E2392603205400109A63 /* SpotifyView.swift */; };
-		6FD9E2442603215300109A63 /* AppleMusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD9E2432603215300109A63 /* AppleMusicView.swift */; };
-		6FD9E24A260322B700109A63 /* SpotifySeekBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD9E249260322B700109A63 /* SpotifySeekBarView.swift */; };
-		6FD9E250260328AF00109A63 /* AppleMusicSeekBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD9E24F260328AF00109A63 /* AppleMusicSeekBarView.swift */; };
 		6FF63DAD2603431300B0249C /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF63DAC2603431300B0249C /* Functions.swift */; };
 		A9454BC322BE1E3300055860 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9454BC222BE1E3300055860 /* AppDelegate.m */; };
 		A9454BC622BE1E3300055860 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9454BC522BE1E3300055860 /* ViewController.m */; };
@@ -141,10 +137,6 @@
 		6F613F0E25F8D3DD008E4D43 /* AudirvanaSeekBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudirvanaSeekBarView.swift; sourceTree = "<group>"; };
 		6F613F1825F8D52B008E4D43 /* SystemMediaSeekBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemMediaSeekBarView.swift; sourceTree = "<group>"; };
 		6FD9E1FE2602353D00109A63 /* ViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
-		6FD9E2392603205400109A63 /* SpotifyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyView.swift; sourceTree = "<group>"; };
-		6FD9E2432603215300109A63 /* AppleMusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMusicView.swift; sourceTree = "<group>"; };
-		6FD9E249260322B700109A63 /* SpotifySeekBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifySeekBarView.swift; sourceTree = "<group>"; };
-		6FD9E24F260328AF00109A63 /* AppleMusicSeekBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMusicSeekBarView.swift; sourceTree = "<group>"; };
 		6FF63DAC2603431300B0249C /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		A9454BBE22BE1E3300055860 /* BetterTouchToolPluginDevelopment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetterTouchToolPluginDevelopment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9454BC122BE1E3300055860 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -248,8 +240,6 @@
 				6F2CB9C125F741AA00554356 /* SeekBarView.swift */,
 				6F613F0E25F8D3DD008E4D43 /* AudirvanaSeekBarView.swift */,
 				6F613F1825F8D52B008E4D43 /* SystemMediaSeekBarView.swift */,
-				6FD9E249260322B700109A63 /* SpotifySeekBarView.swift */,
-				6FD9E24F260328AF00109A63 /* AppleMusicSeekBarView.swift */,
 			);
 			path = SeekBar;
 			sourceTree = "<group>";
@@ -260,8 +250,6 @@
 				6F16278925F202FD009E5774 /* NowPlayingView.swift */,
 				6F5B932125F3510400E2EE07 /* AudirvanaView.swift */,
 				6F0216E625F34E71002914E8 /* SystemMediaView.swift */,
-				6FD9E2392603205400109A63 /* SpotifyView.swift */,
-				6FD9E2432603215300109A63 /* AppleMusicView.swift */,
 			);
 			path = NowPlaying;
 			sourceTree = "<group>";
@@ -677,7 +665,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6FD9E24A260322B700109A63 /* SpotifySeekBarView.swift in Sources */,
 				A9454C3522BE219400055860 /* PluginViewController.swift in Sources */,
 				6F0216E725F34E71002914E8 /* SystemMediaView.swift in Sources */,
 				6F2CBA1825F8BB3E00554356 /* Configuration.swift in Sources */,
@@ -687,10 +674,7 @@
 				6F613F0F25F8D3DD008E4D43 /* AudirvanaSeekBarView.swift in Sources */,
 				6FF63DAD2603431300B0249C /* Functions.swift in Sources */,
 				A9454C1522BE1F9100055860 /* PluginMain.swift in Sources */,
-				6FD9E250260328AF00109A63 /* AppleMusicSeekBarView.swift in Sources */,
 				6F16278A25F202FD009E5774 /* NowPlayingView.swift in Sources */,
-				6FD9E2442603215300109A63 /* AppleMusicView.swift in Sources */,
-				6FD9E23A2603205400109A63 /* SpotifyView.swift in Sources */,
 				6F5B932B25F3514300E2EE07 /* AudirvanaView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

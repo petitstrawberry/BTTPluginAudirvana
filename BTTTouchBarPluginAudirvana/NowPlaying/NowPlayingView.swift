@@ -17,13 +17,18 @@ struct NowPlayingView: View {
     var body: some View {
         GeometryReader { geometry in
             if !isAudirvanaPlaying() {
-                let player = getPlayingPlayer(players: [spotify, appleMusic])
-                
-                if player?.name == .spotify {
-                    SpotifyView(geometry: geometry)
-                }else if player?.name == .appleMusic {
-                    AppleMusicView(geometry: geometry)
-                }else if Configuration.shared.isSystemMediaMode {
+//                let player = getPlayingPlayer(players: [spotify, appleMusic])
+//
+//                if player?.name == .spotify {
+//                    SpotifyView(geometry: geometry)
+//                }else if player?.name == .appleMusic {
+//                    AppleMusicView(geometry: geometry)
+//                }else if systemPlayer.playbackState != .stopped && Configuration.shared.isSystemMediaMode {
+//                    SystemMediaView(geometry: geometry)
+//                }else {
+//                    AudirvanaView(geometry: geometry)
+//                }
+                if Configuration.shared.isSystemMediaMode && systemPlayer.playbackState != .stopped {
                     SystemMediaView(geometry: geometry)
                 }else {
                     AudirvanaView(geometry: geometry)

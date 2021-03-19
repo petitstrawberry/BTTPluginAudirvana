@@ -18,13 +18,18 @@ struct SeekBarView: View {
     var body: some View {
         GeometryReader { geometry in
             if !isAudirvanaPlaying() {
-                let player = getPlayingPlayer(players: [spotify, appleMusic])
-                
-                if  player?.name == .spotify {
-                    SpotifySeekBarView(geometry: geometry)
-                }else if player?.name == .appleMusic {
-                    AppleMusicSeekBarView(geometry: geometry)
-                }else if Configuration.shared.isSystemMediaMode {
+//                let player = getPlayingPlayer(players: [spotify, appleMusic])
+//
+//                if  player?.name == .spotify {
+//                    SpotifySeekBarView(geometry: geometry)
+//                }else if player?.name == .appleMusic {
+//                    AppleMusicSeekBarView(geometry: geometry)
+//                }else if Configuration.shared.isSystemMediaMode {
+//                    SystemMediaSeekBarView(geometry: geometry)
+//                }else {
+//                    AudirvanaSeekBarView(geometry: geometry)
+//                }
+                if Configuration.shared.isSystemMediaMode && systemPlayer.playbackState != .stopped {
                     SystemMediaSeekBarView(geometry: geometry)
                 }else {
                     AudirvanaSeekBarView(geometry: geometry)

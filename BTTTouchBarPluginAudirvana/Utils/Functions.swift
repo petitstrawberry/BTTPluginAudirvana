@@ -39,13 +39,16 @@ func getPlayingPlayer(players: [MusicPlayers.Scriptable]) -> MusicPlayers.Script
     var playingPlayer: MusicPlayers.Scriptable? = nil
     var score: Int = 0
     for player in players {
-        var playerScore = 0
+        var playerScore: Int = 0
+        
         if !isRunningApp(bundleIdentifier: player.playerBundleID) {
             continue
         }
         
         if player.currentTrack != nil {
             playerScore+=1
+        } else {
+            continue
         }
         if player.playbackState != nil && player.playbackState.isPlaying {
             playerScore+=1
