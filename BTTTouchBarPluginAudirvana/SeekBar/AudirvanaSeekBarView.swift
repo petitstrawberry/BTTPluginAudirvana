@@ -8,12 +8,14 @@
 import SwiftUI
 import MusicPlayer
 import Sliders
+import Pailead
 
 struct AudirvanaSeekBarView: View {
     @State var geometry: GeometryProxy
-    @EnvironmentObject var player: MusicPlayers.Scriptable
+    @ObservedObject var player = MusicPlayers.Scriptable(name: .audirvana)!
     @State var position: Double = 0
     @State var sliderState: Bool = false
+    @State var barColor: NSColor = NSColor.init(red: 0.4, green: 0.5, blue: 0.9, alpha: 1)
     var positionSec: Double {
         position * (player.currentTrack?.duration ?? 0)
     }
@@ -33,10 +35,12 @@ struct AudirvanaSeekBarView: View {
             .valueSliderStyle(
                 HorizontalValueSliderStyle(
                     track: HorizontalValueTrack(
-                        view: Color.blue.opacity(0.7),
-                        mask: Rectangle())
+                        view: Color(barColor).opacity(0.7),
+                        mask: Rectangle().cornerRadius(8.0).clipped())
+                        .cornerRadius(8.0)
+                        .clipped()
                         .frame(height: 16, alignment: .center)
-                        .background(Rectangle().foregroundColor(Color.secondary.opacity(0.4))),
+                        .background(Rectangle().foregroundColor(Color.secondary.opacity(0.4)).cornerRadius(8.0)),
                     thumbSize: CGSize(width: 0, height: 0),
                     thumbInteractiveSize: CGSize(width: 32, height: 32),
                     options: .interactiveTrack
@@ -49,8 +53,14 @@ struct AudirvanaSeekBarView: View {
         .onReceive(timer, perform: { _ in
             if !sliderState {
                 DispatchQueue.global().async {
-                    player.updatePlayerState()
-                    position = player.playbackState.time / ( player.currentTrack?.duration ?? 1)
+                    if  player.playbackState.isPlaying {
+                        player.updatePlayerState()
+                        if player.currentTrack?.duration != 0 {
+                            position = player.playbackState.time / ( player.currentTrack?.duration ?? 1)
+                        }else {
+                            position = 0
+                        }
+                    }
                 }
             }
         }
@@ -58,8 +68,21 @@ struct AudirvanaSeekBarView: View {
         
         .frame(width: geometry.size.width, height: geometry.size.height, alignment: .leading)
         .clipped()
-        
+        .trigger(trigger: player.currentTrack) {
+            barColor = NSColor.init(red: 0.4, green: 0.5, blue: 0.9, alpha: 1)
+            if player.currentTrack != nil && player.currentTrack?.artwork != nil {
+                Pailead.extractPalette(from: player.currentTrack!.artwork!) { palette in
+                    if palette.lightMutedSwatch != nil{
+                        barColor = palette.lightMutedSwatch!.color
+                    }else if palette.vibrantSwatch != nil {
+                        barColor = palette.vibrantSwatch!.color
+                    }
+                }
+            }
+        }
     }
+    
+    
     
     private func timeFormatter(sec: Int) -> String {
         
@@ -74,3 +97,6 @@ struct AudirvanaSeekBarView: View {
         }
     }
 }
+
+
+

@@ -34,6 +34,10 @@ import AppKit
             let mode = self.configurationValues["plugin_var_isSeekBarMode"]
             Configuration.shared.isSeekBarMode = mode as! Bool
         }
+        if((self.configurationValues["plugin_var_isSystemMediaMode"]) != nil) {
+            let mode = self.configurationValues["plugin_var_isSystemMediaMode"]
+            Configuration.shared.isSystemMediaMode = mode as! Bool
+        }
     }
 
     // here you can configure what items are shown in the BTT configuration side-bar for this plugin
@@ -61,13 +65,18 @@ import AppKit
 //
 //        modeMenu.formOptions = [itemNowPlaying, itemSeekBar]
         
+        let systemMediaCheckbox = BTTPluginFormItem.init()
+        systemMediaCheckbox.formFieldType = BTTFormTypeCheckbox
+        systemMediaCheckbox.formFieldID = "plugin_var_isSystemMediaMode"
+        systemMediaCheckbox.formLabel1 = "SystemMediaから情報取得 (実験的機能 不具合多数あり)"
         
-        let checkbox = BTTPluginFormItem.init()
-        checkbox.formFieldType = BTTFormTypeCheckbox
-        checkbox.formFieldID = "plugin_var_isSeekBarMode"
-        checkbox.formLabel1 = "SeekBarとして表示 (SeekBar Mode)"
         
-        groupNowPlaying.formOptions = [checkbox]
+        let seekbarCheckbox = BTTPluginFormItem.init()
+        seekbarCheckbox.formFieldType = BTTFormTypeCheckbox
+        seekbarCheckbox.formFieldID = "plugin_var_isSeekBarMode"
+        seekbarCheckbox.formLabel1 = "SeekBarとして表示 (SeekBar Mode)"
+        
+        groupNowPlaying.formOptions = [systemMediaCheckbox, seekbarCheckbox]
         
         return groupNowPlaying
     }

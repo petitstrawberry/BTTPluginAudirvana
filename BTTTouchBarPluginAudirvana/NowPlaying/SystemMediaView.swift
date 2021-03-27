@@ -10,7 +10,7 @@ import MusicPlayer
 
 struct SystemMediaView: View {
     @State var geometry: GeometryProxy
-    @EnvironmentObject var player: MusicPlayers.SystemMedia
+    @ObservedObject var player = MusicPlayers.SystemMedia()!
 
     @State var backgroundColor: NSColor = .controlColor
 

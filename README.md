@@ -27,21 +27,11 @@ sudo spctl --master-enable
 
 BTTのトリガー設定画面からSeekBarモードを有効にすることでNowPlayingウィジェットの代わりにSeekBarウィジェットが表示されます。
 
-# Credits
-
-- [BetterTouchToolPlugins](https://github.com/folivoraAI/BetterTouchToolPlugins)
-
-- [swiftui-sliders](https://github.com/spacenation/swiftui-sliders)
-  - いい感じにカスタムして使えるスライダー。めっちゃ感謝。
-
-- [MusicPlayer](https://github.com/ddddxxx/MusicPlayer)
-  - 各種プレイヤーの操作を可能にしてくれる。めっちゃ感謝。
-
 # LICENSES
 
 ## BetterTouchToolPlugins
 MIT License
- https://github.com/folivoraAI/BetterTouchToolPlugins/blob/master/LICENSE
+  https://github.com/folivoraAI/BetterTouchToolPlugins/blob/master/LICENSE
 
 ## swiftui-sliders
 MIT License
@@ -50,3 +40,7 @@ MIT License
 ## MusicPlayer
 Mozilla Public License Version 2.0
   https://github.com/ddddxxx/MusicPlayer/blob/master/LICENSE
+
+## Pailead
+MIT Licsense
+  https://github.com/pducks32/Pailead/blob/master/LICENSE

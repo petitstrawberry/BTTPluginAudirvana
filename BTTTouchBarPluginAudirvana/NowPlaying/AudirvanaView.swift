@@ -10,8 +10,7 @@ import MusicPlayer
 
 struct AudirvanaView: View {
     @State var geometry: GeometryProxy
-    @EnvironmentObject var player: MusicPlayers.Scriptable
-    
+    @ObservedObject var player = MusicPlayers.Scriptable(name: .audirvana)!
     @State var backgroundColor: NSColor = .controlColor
     
     func openAudirvana() -> Bool {
