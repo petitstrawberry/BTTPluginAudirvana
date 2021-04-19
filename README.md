@@ -27,7 +27,7 @@ sudo spctl --master-enable
 
 BTTのトリガー設定画面からSeekBarモードを有効にすることでNowPlayingウィジェットの代わりにSeekBarウィジェットが表示されます。
 
-# LICENSES
+# Acknowledgements
 
 ## BetterTouchToolPlugins
 MIT License
